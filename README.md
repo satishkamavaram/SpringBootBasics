@@ -1,7 +1,7 @@
 # SpringBootBasics
-1 - Created Simple Rest WebService with Spring Boot.
-2 - Created a Junit Test Class with Spring + Mockito + PowerMockito
-3 - Junit test class has stubbing of instance and static method behavior.
+1 - Created Simple Rest WebService with Spring Boot.  
+2 - Created a Junit Test Class with Spring + Mockito + PowerMockito  
+3 - Junit test class has stubbing of instance and static method behavior.  
 
 #Spring Boot MongoDB
 1- Implemented MongoDB CRUD REST API's using HTTP VERBS 
