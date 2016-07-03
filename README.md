@@ -5,12 +5,12 @@
 
 #Spring Boot MongoDB
 1- Implemented MongoDB CRUD REST API's using HTTP VERBS   
-	Creating new Chat Transaction : POST http://localhost:8080/chat/new  
-	Updating Chat Messages : POST http://localhost:8080/chat/message/{id}    
-	Ending Chat : GET http://localhost:8080/chat/end/{id}  
-	Getting all Chat Transactions : GET http://localhost:8080/chat/all  
-	Getting individual Chat Transaction : GET http://localhost:8080/chat/{id}  
-	Delete individual Chat Transactions : DEL http://localhost:8080/chat/{id}  
+	  Creating new Chat Transaction : POST http://localhost:8080/chat/new  
+	  Updating Chat Messages : POST http://localhost:8080/chat/message/{id}    
+	  Ending Chat : GET http://localhost:8080/chat/end/{id}  
+	  Getting all Chat Transactions : GET http://localhost:8080/chat/all  
+	  Getting individual Chat Transaction : GET http://localhost:8080/chat/{id}  
+	  Delete individual Chat Transactions : DEL http://localhost:8080/chat/{id}  
 2- Used Spring data Boot which provides default CRUD operations.     
 3- For Custom Repository methods , implemented Custom Repository class (ChatMessagesRepositoryImpl.java).  
 
