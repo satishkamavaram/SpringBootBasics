@@ -8,7 +8,18 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.format.annotation.DateTimeFormat.ISO;
-
+/**
+ * @author satishkamavaram
+ * Add a Chat Transaction :
+ * {
+  "initiator" : "satish",
+   "messages" : [ {
+                 "from" : "satish",
+                 "to" : "namratha",
+                 "message" : "hi"
+                 }]
+} 
+ */
 @Document(collection="chatTransaction")
 public class ChatTransaction {
 	
