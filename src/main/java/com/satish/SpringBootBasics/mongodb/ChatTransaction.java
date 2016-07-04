@@ -15,6 +15,9 @@ public class ChatTransaction {
 	@Id
 	private String id;
 	
+	@Field("initiator")
+	private String initiator;
+	
 	@Field("startTime")
 	@DateTimeFormat(iso = ISO.DATE_TIME)
 	private Date chatStartTime;
@@ -65,6 +68,14 @@ public class ChatTransaction {
 		return messages;
 	}
 	
+	
+	
+	public String getInitiator() {
+		return initiator;
+	}
+	public void setInitiator(String initiator) {
+		this.initiator = initiator;
+	}
 	@Override
 	public String toString() {
 		return String.format("Id=%s, StartTime=%s EndTime=%s Messages=%s",

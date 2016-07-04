@@ -22,17 +22,17 @@ public class ChatMessagesRepositoryImpl implements CustomChatMessagesRepository 
 	 * @param id
 	 */
 	public ChatTransaction addMessages(Messages message,String id) {
-	  operations.updateFirst(new Query(Criteria.where("id").is(id)),
-				new Update().push("messages",message), 
+	  operations.updateFirst(new Query(Criteria.where(ID).is(id)),
+				new Update().push(MESSAGES,message), 
 				ChatTransaction.class);
-	 return operations.findOne(new Query(Criteria.where("id").is(id)), ChatTransaction.class);
+	 return operations.findOne(new Query(Criteria.where(ID).is(id)), ChatTransaction.class);
 	}
 	
 	/**
 	 * 
 	 */
 	public void endChat(String id) {
-		 operations.updateFirst(new Query(Criteria.where("id").is(id)),new Update().set("chatEndTime", new Date()),ChatTransaction.class);
+		 operations.updateFirst(new Query(Criteria.where(ID).is(id)),new Update().set(CHAT_END_TIME, new Date()),ChatTransaction.class);
 	}
 	
 }
