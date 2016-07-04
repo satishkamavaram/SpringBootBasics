@@ -13,7 +13,7 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 public class ChatTransaction {
 	
 	@Id
-	private String id;
+	private Long id;
 	
 	@Field("initiator")
 	private String initiator;
@@ -32,7 +32,12 @@ public class ChatTransaction {
 	public  ChatTransaction() {
 		this.chatStartTime = new Date();
 	}
-	public void setId(String id) {
+	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -52,10 +57,6 @@ public class ChatTransaction {
 		this.messages.add(msg);
 	}
 
-	public String getId() {
-		return id;
-	}
-
 	public Date getChatStartTime() {
 		return chatStartTime;
 	}
@@ -68,14 +69,14 @@ public class ChatTransaction {
 		return messages;
 	}
 	
-	
-	
 	public String getInitiator() {
 		return initiator;
 	}
+
 	public void setInitiator(String initiator) {
 		this.initiator = initiator;
 	}
+	
 	@Override
 	public String toString() {
 		return String.format("Id=%s, StartTime=%s EndTime=%s Messages=%s",
